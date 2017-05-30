@@ -1,0 +1,43 @@
+body, html {
+	background-color: #eee;
+	font-family:sans-serif;
+}
+
+
+.banner {
+	background-color: #aaa;
+    font-size: 20px;
+    padding: 10px;
+    border-radius:3px;
+}
+
+#span {
+	display:inline-block;
+	padding:10px;
+}
+
+
+
+#span label {
+	display:block;
+}
+
+#span #left {
+	width:150px;
+}
+
+table {
+	width: 100%;
+    text-align: left;
+    background-color: #aaa;
+    margin: 20px 0px;
+}
+
+table tr td {
+	cursor:pointer;
+	background-color:#aaa;
+}
+
+table tr:hover td {
+	background-color:#fff;
+}

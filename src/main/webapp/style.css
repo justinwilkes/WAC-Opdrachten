@@ -1,0 +1,17 @@
+body, html {
+	background-color: #eee;
+	font-family:sans-serif;
+}
+
+.category {
+	width: 70%;
+    background-color: #fff;
+    border-radius: 3px;
+    padding: 20px;
+    margin: 20px auto;
+}
+
+.category a {
+    display: grid;
+    padding: 5px 0px;
+}
