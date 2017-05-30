@@ -8,7 +8,7 @@
 	 			<param-name>jersey.config.server.provider.packages</param-name>
 	 			<param-value>nl.hu.v1wac.firstapp.webservices</param-value>
 	 		</init-param>
-	 		<load-on-startup>1</load-on-startup>
+	 		
 		</servlet>
 		
 		<servlet-mapping>
@@ -24,5 +24,6 @@
 		<error-page>
 			<error-code>404</error-code>
 			<location>/errorpage.html</location>
-		</error-page>		
+		</error-page>
+		
 	</web-app>

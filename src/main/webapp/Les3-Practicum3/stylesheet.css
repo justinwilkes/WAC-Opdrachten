@@ -1,0 +1,48 @@
+body, html {
+	background-color: #eee;
+	margin:0px;
+	padding:0px;
+	font-family:sans-serif;
+}
+
+.calculatorOuter {
+	box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 3px;
+    width: 40%;
+    margin-left: 30%;
+    margin-top:100px;
+}
+
+.calculatorOuter #output {
+    background-color: #eee;
+    height: 50px;
+    border-radius: 3px;
+    padding:10px;
+    box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);    
+    text-align: right;
+    font-size: 30px;
+}
+
+.calculatorOuter #inputButtons {
+	padding: 10px;
+    display: inline-block;
+}
+
+.calculatorOuter #inputButtons #inputButton {
+	width: calc(25% - 25px);
+    padding: 25px;
+    margin: 10px;
+	box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+	border: none;
+    outline: none;
+    background-color: #eee;
+    border-radius: 5px;
+    cursor:pointer;
+    font-size:20px;
+}
+
+.calculatorOuter #inputButtons .a {
+	background-color:#ddd !important;
+}
