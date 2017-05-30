@@ -1,7 +1,7 @@
 <html>
 	<head>
 		<!-- Basic Tags -->
-		<title>Login</title>
+		<title>Links</title>
 
 		<!-- Meta Tags -->
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,61 +15,71 @@
   		<link rel="stylesheet" href="style.css">  
 	</head>
 	<body>
-
+		
+		<h1>Navigatie</h1>
+		<p class="head">Klik op een link om daarheen te gaan</p>
+		
 		<div class="category z-depth-4">
-			<div class="banner">Login</div>			
-
-			<div class="row">
-				<form id="form" class="col s12">
-					<div class="row">
-						<div class="input-field col s12">
-							<input id="username" name="username" type="text" class="validate">
-							<label for="username">Gebruikersnaam</label>
-						</div>
-					</div>
-
-					<div class="row">
-						<div class="input-field col s12">
-							<input id="password" name="password" type="password" class="validate">
-							<label for="password">Wachtwoord</label>
-						</div>
-					</div>	
-					<div class="row">
-						<a class="col s3 waves-effect waves-light btn login">Inloggen</a>
-					</div>	
-				</form>
-			</div>
-
+			<div class="banner">Login</div>	
+			<a href="login.html">Login Pagina</a>				
+		</div>
+		
+		<div class="category z-depth-4">
+			<div class="banner">Les 1</div>		
+			<p>Geen beschikbare pagina's</p>	
 		</div>
 
 
-		<script>
+		<div class="category z-depth-4">
+			<div class="banner">Les 2</div>
+			<a href="Les2-Practicum">Les 2 Practicum 1</a>			
+		</div>
 
-			$(function() {
 
-				$(".login").on("click", function() {
-					var data = $("#form").serialize();
-					console.log(data)
+		<div class="category z-depth-4">
+			<div class="banner">Les 3</div>
+			<a href="Les3-Practicum1">Les 3 Practicum 1</a>
+			<a href="Les3-Practicum3">Les 3 Practicum 3</a>			
+		</div>
 
-				
 
-					$.post("restservices/authentication", data, function(response) {
-						window.sessionStorage.setItem("sessionToken", response);
+		<div class="category z-depth-4">
+			<div class="banner">Les 4</div>	
+			<p>Geen beschikbare pagina's</p>	
+		</div>
 
-					}).fail(function(jqXHR, textStatus, errorThrown) {
-						console.log(textStatus);
-						console.log(errorThrown);
-					});
 
-				})
+		<div class="category z-depth-4">
+			<div class="banner">Les 5</div>
+			<a href="Les5-Practicum1">Les 5 Practicum 1</a>
+			<a href="Les5-Practicum2">Les 5 Practicum 2</a>	
+			<a href="Les5-Practicum3">Les 5 Practicum 3</a>	
+			<a href="Les5-Practicum5">Les 5 Practicum 5</a>			
+		</div>
 
-				
 
-			})
-			
+		<div class="category z-depth-4">
+			<div class="banner">Les 6</div>	
+			<a href="Les6-Practicum1/Page 1">Les 6 Practicum 1 - Pagina 1</a>
+			<a href="Les6-Practicum1/Page 2">Les 6 Practicum 1 - Pagina 2</a>
+			<a href="Les6-Practicum2">Les 6 Practicum 2</a>
+		</div>
 
-		</script>
+		<div class="category z-depth-4">
+			<div class="banner">Les 7</div>	
+			<p>Geen beschikbare pagina's</p>	
+		</div>
+
+		<div class="category z-depth-4">
+			<div class="banner">Les 8</div>	
+			<a href="Les8-Practicum1">Les 8 Practicum 1</a>
+		</div>
+
+		<div class="category z-depth-4">
+			<div class="banner">Les 9</div>	
+			<a href="Les9-Practicum2">Les 9 Practicum 2</a>
+			<a href="Les9-Practicum3">Les 9 Practicum 3</a>
+		</div>
 
 	</body>
 </html>
-

@@ -1,0 +1,75 @@
+<html>
+	<head>
+		<!-- Basic Tags -->
+		<title>Login</title>
+
+		<!-- Meta Tags -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+		<!-- Script Imports -->
+		<script src="https://ajax.aspnetcdn.com/ajax/jQuery/jquery-3.2.1.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/js/materialize.min.js"></script>
+
+		<!-- Style Imports -->
+  		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.98.2/css/materialize.min.css">  
+  		<link rel="stylesheet" href="style.css">  
+	</head>
+	<body>
+
+		<div class="category z-depth-4">
+			<div class="banner">Login</div>			
+
+			<div class="row">
+				<form id="form" class="col s12">
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="username" name="username" type="text" class="validate">
+							<label for="username">Gebruikersnaam</label>
+						</div>
+					</div>
+
+					<div class="row">
+						<div class="input-field col s12">
+							<input id="password" name="password" type="password" class="validate">
+							<label for="password">Wachtwoord</label>
+						</div>
+					</div>	
+					<div class="row">
+						<a class="col s3 waves-effect waves-light btn login">Inloggen</a>
+					</div>	
+				</form>
+			</div>
+
+		</div>
+
+
+		<script>
+
+			$(function() {
+
+				$(".login").on("click", function() {
+					var data = $("#form").serialize();
+					console.log(data)
+
+				
+
+					$.post("restservices/authentication", data, function(response) {
+						window.sessionStorage.setItem("sessionToken", response);
+
+					}).fail(function(jqXHR, textStatus, errorThrown) {
+						console.log(textStatus);
+						console.log(errorThrown);
+					});
+
+				})
+
+				
+
+			})
+			
+
+		</script>
+
+	</body>
+</html>
+

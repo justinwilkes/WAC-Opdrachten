@@ -3,7 +3,6 @@ package nl.hu.v1wac.firstapp.model;
 import java.util.List;
 import nl.hu.v1wac.firstapp.persistence.CountryDAO;
 
-
 public class WorldService extends CountryDAO {		
 	
 	public List<Country> getAllCountries() {
