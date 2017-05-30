@@ -17,7 +17,7 @@
 
 	function loadCountries() {			
 		$.ajax({
-			url: "https://localhost:8443/firstapp/restservices/countries",
+			url: "/restservices/countries",
 			method: "GET",
 			beforeSend: function (xhr) {
 				var token = window.sessionStorage.getItem("sessionToken");
@@ -38,7 +38,7 @@
 	function deleteCountry(code) {
 		
 		$.ajax({
-		    url: "https://localhost:8443/firstapp/restservices/countries/" + code,
+		    url: "/restservices/countries/" + code,
 		    method: "DELETE",
 		    beforeSend: function (xhr) {
 		        var token = window.sessionStorage.getItem("sessionToken");
@@ -57,7 +57,7 @@
 	function updateCountry(code) {
 
 		$.ajax({
-		    url: "https://localhost:8443/firstapp/restservices/countries/" + code,
+		    url: "/restservices/countries/" + code,
 		    method: "GET",
 		    beforeSend: function (xhr) {
 		        var token = window.sessionStorage.getItem("sessionToken");
@@ -78,7 +78,7 @@
 		var data = $("#formJson").serialize(); 		
 		
 		$.ajax({
-		    url: "https://localhost:8443/firstapp/restservices/countries/",
+		    url: "/restservices/countries/",
 		    method: "PUT",
 		    data: data,
 		    beforeSend: function (xhr) {
@@ -102,7 +102,7 @@
 	function saveRequest() {
 		var data = $("#formJson2").serialize(); 		
 		$.ajax({
-		    url: 'http://localhost:4711/firstapp/restservices/countries/',
+		    url: '/restservices/countries/',
 		    type: 'POST',
 		    data: data, 
 		    contentType:'application/x-www-form-urlencoded', 
