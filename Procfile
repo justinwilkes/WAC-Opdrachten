@@ -1,2 +1,2 @@
-web: java $JAVA_OPTS -jar target/dependency/webapp-runner.jar 
---port 44920 target/*.war
+web: java $JAVA_OPTS -cp "target/dependency/*" webapp.runner.launch.Main
+--port $PORT target/*.war
