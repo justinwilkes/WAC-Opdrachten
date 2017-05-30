@@ -16,7 +16,7 @@
 
 
 	function loadCountries() {			
-		$.getJSON("http://localhost:4711/firstapp/restservices/countries", function(data) {					
+		$.getJSON("/restservices/countries", function(data) {					
 			$.each(data, function(i, value) {
 				$("tbody").append("<tr><td class='land'>" + data[i]["name"] + "</td><td>" + data[i]["capital"] + "</td><td>" + data[i]["region"] + "</td><td>" + data[i]["surfce"] + "</td><td>" + data[i]["population"] + "</td><td><i class='material-icons delete' code='" + data[i]["code"] + "'>delete</i><i class='material-icons update' code='" + data[i]["code"] + "'>mode_edit</i></tr>")			
 			});			
@@ -28,7 +28,7 @@
 
 	function deleteCountry(code) {
 		$.ajax({
-		    url: 'http://localhost:4711/firstapp/restservices/countries/' + code,
+		    url: '/restservices/countries/' + code,
 		    type: 'DELETE',
 		    contentType:'application/json',  
 		    dataType: 'text'
@@ -37,7 +37,7 @@
 
 
 	function updateCountry(code) {
-		$.getJSON("http://localhost:4711/firstapp/restservices/countries/" + code, function(data) {			
+		$.getJSON("/restservices/countries/" + code, function(data) {			
   			$.each(data, function(key, value) {
    				$('[name='+key+']', $("#formJson")).val(value);
   			});
@@ -49,7 +49,7 @@
 	function updateRequest() {
 		var data = $("#formJson").serialize(); 		
 		$.ajax({
-		    url: 'http://localhost:4711/firstapp/restservices/countries/',
+		    url: '/restservices/countries/',
 		    type: 'PUT',
 		    data: data, 
 		    contentType:'application/x-www-form-urlencoded', 
@@ -66,7 +66,7 @@
 	function saveRequest() {
 		var data = $("#formJson2").serialize(); 		
 		$.ajax({
-		    url: 'http://localhost:4711/firstapp/restservices/countries/',
+		    url: '/restservices/countries/',
 		    type: 'POST',
 		    data: data, 
 		    contentType:'application/x-www-form-urlencoded', 
