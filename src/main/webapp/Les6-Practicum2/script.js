@@ -26,12 +26,7 @@
 		$(".banner.weather").text("Het weer in " + city);
 
 		if(sessionStorage.getItem(lat + "," + lon) == null) {
-			console.log("Land is nog niet opgeslagen in session storage: \n" + "lat: " + lat + "\nlon: " + lon)
-			
-
-
-			$.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=5bf74c3ab8006106a7439496e26b360b", function(data) {			
-
+			$.getJSON("http://api.openweathermap.org/data/2.5/weather?lat=" + lat + "&lon=" + lon + "&appid=5bf74c3ab8006106a7439496e26b360b", function(data) {	
 				sessionStorage.setItem((lat + "," + lon), JSON.stringify(data) + ";;" + Date.now())
 
 				$("#temperatuur").text(Math.round((data["main"]["temp"] - 273.15) * 10) / 10 + " C");
@@ -99,7 +94,7 @@
 
 	function loadCountries() {		
 		$("tbody").html("<tr><th>Land</th><th>Hoofdstad</th><th>Regio</th><th>Oppervlakte</th><th>Inwoners</th></tr>")	
-		$.getJSON("http://localhost:4711/firstapp/restservices/countries", function(data) {					
+		$.getJSON("/restservices/countries", function(data) {					
 			$.each(data, function(i, value) {
 				$("tbody").append("<tr onclick='showWeather(" + data[i]["lat"] + "," + data[i]["lat"] + ")'><td>" + data[i]["name"] + "</td><td>" + data[i]["capital"] + "</td><td>" + data[i]["region"] + "</td><td>" + data[i]["surfce"] + "</td><td>" + data[i]["population"] + "</td></tr>")			
 			});			

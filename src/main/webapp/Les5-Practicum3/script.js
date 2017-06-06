@@ -50,7 +50,7 @@
 
 
 	function loadCountries() {
-		$.getJSON("http://localhost:4711/firstapp/restservices/countries", function(data) {		
+		$.getJSON("/restservices/countries", function(data) {		
 			$.each(data, function(i, value) {
 				$("tbody").append("<tr onclick='showWeather(" + data[i]["lat"] + "," + data[i]["lat"] + ")'><td>" + data[i]["name"] + "</td><td>" + data[i]["capital"] + "</td><td>" + data[i]["region"] + "</td><td>" + data[i]["surfce"] + "</td><td>" + data[i]["population"] + "</td></tr>")			
 			});			
